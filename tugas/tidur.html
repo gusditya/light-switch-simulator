@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>TIDUR</title>
+    <style>
+        /* Tambahan agar tinggi layar pas */
+        body {
+            height: 100vh;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+    <header class="bg-gray-500 py-4 text-center shadow-lg">
+        <h1 class="text-2xl font-bold tracking-widest">LAMPU KAMAR TIDUR</h1>
+    </header>
+
+    <div class="flex h-screen justify-center items-center gap-8">
+        <!-- RUANGAN KELUARGA -->
+        <!-- LAMPU 1 -->
+        <div class="flex flex-col items-center">
+            <img src="assets/images/off.png" alt="" id="lampu1" width="185" />
+            <br>
+            <h1 class="text">LAMPU 1</h1><br>
+            <label for="default-toggle1" class="inline-flex relative items-center
+          cursor-pointer">
+                <input type="checkbox" id="default-toggle1" class="sr-only
+            peer" onchange="saklarmakan()">
+                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none
+            peer-focus:ring-4 peer-focus:ring-blue-300
+            dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700
+            peer-checked:after:translate-x-full peer-checked:after:border-white
+            after:content-[''] after:absolute after:top-[2px] after:left-[2px]
+            after:bg-white after:border-gray-300 after:border after:rounded-full
+            after:h-5 after:w-5 after:transition-all dark:border-gray-600
+            peer-checked:bg-blue-600"></div>
+            </label>
+
+            <br> <button onclick="saklarmakan('on', 1)"
+                class="inline-block rounded-sm bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl hover:bg-gray-900"
+                href="#" href="#">NYALAKAN LAMPU</button>
+            <br>
+            <button onclick="saklarmakan('off', 1)"
+                class="inline-block rounded-sm border border-current px-8 py-3 text-sm font-medium text-indigo-600 hover:scale-110 hover:shadow-xl hover:bg-white hover:text-gray-600"
+                href="#">MATIKAN LAMPU</button>
+
+        </div>
+
+        <!-- LAMPU 2 -->
+        <div class="flex flex-col items-center">
+            <img src="assets/images/off.png" alt="" id="lampu2" width="185" />
+            <br>
+            <h1 class="text">LAMPU 2</h1><br>
+            <label for="default-toggle2" class="inline-flex relative items-center
+          cursor-pointer">
+                <input type="checkbox" id="default-toggle2" class="sr-only
+            peer" onchange="saklarmakan()">
+                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none
+            peer-focus:ring-4 peer-focus:ring-blue-300
+            dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700
+            peer-checked:after:translate-x-full peer-checked:after:border-white
+            after:content-[''] after:absolute after:top-[2px] after:left-[2px]
+            after:bg-white after:border-gray-300 after:border after:rounded-full
+            after:h-5 after:w-5 after:transition-all dark:border-gray-600
+            peer-checked:bg-blue-600"></div>
+            </label>
+
+            <br> <button onclick="saklarmakan('on', 2)"
+                class="inline-block rounded-sm bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl hover:bg-gray-900"
+                href="#" href="#">NYALAKAN LAMPU</button>
+            <br>
+            <button onclick="saklarmakan('off', 2)"
+                class="inline-block rounded-sm border border-current px-8 py-3 text-sm font-medium text-indigo-600 hover:scale-110 hover:shadow-xl hover:bg-white hover:text-gray-600"
+                href="#">MATIKAN LAMPU</button>
+
+        </div>
+        
+        <div class="flex flex-col items-center">
+            <br>
+            <h1 class="text">ALL LAMP</h1><br>
+            <label for="default-toggle4" class="inline-flex relative items-center
+          cursor-pointer">
+                <input type="checkbox" id="default-toggle4" class="sr-only
+            peer" onchange="saklarMAKAN()">
+                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none
+            peer-focus:ring-4 peer-focus:ring-blue-300
+            dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700
+            peer-checked:after:translate-x-full peer-checked:after:border-white
+            after:content-[''] after:absolute after:top-[2px] after:left-[2px]
+            after:bg-white after:border-gray-300 after:border after:rounded-full
+            after:h-5 after:w-5 after:transition-all dark:border-gray-600
+            peer-checked:bg-blue-600"></div>
+            </label>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script src="lampu.js"></script>
+</body>
+
+</html>

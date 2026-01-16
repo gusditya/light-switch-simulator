@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>KELUARGA</title>
+    <style>
+        body {
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Efek Glow untuk Master Switch */
+        .glow-effect {
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .glow-effect:hover {
+            box-shadow: 0 0 25px rgba(99, 102, 241, 0.8);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body class="flex flex-col h-screen bg-gray-900 text-white font-sans">
+
+    <!-- 1. NAVBAR (FULL WIDTH DI ATAS) -->
+    <nav
+        class="w-full h-16 bg-indigo-600 border-b border-indigo-700 flex items-center justify-between px-6 shadow-xl z-50 shrink-0">
+        <!-- Logo / Brand -->
+        <div class="flex items-center gap-3">
+            <div class="p-1.5 bg-white/20 rounded-lg backdrop-blur-sm">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+            </div>
+            <span class="text-lg font-bold tracking-widest text-white">SMART HOME</span>
+        </div>
+
+        <!-- Widget Cuaca (Dipindah ke Navbar agar rapi) -->
+        <div class="flex items-center gap-4 bg-indigo-700/50 px-4 py-1.5 rounded-full border border-indigo-500/30">
+            <div class="text-yellow-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                    </path>
+                </svg>
+            </div>
+            <div class="flex flex-col leading-none">
+                <span class="text-sm font-bold">28°C</span>
+                <span class="text-[10px] text-indigo-200">Indoor</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- WRAPPER UTAMA (SIDEBAR + KONTEN) -->
+    <div class="flex flex-1 overflow-hidden">
+
+        <!-- 2. SIDEBAR (KIRI - VERTIKAL) -->
+        <aside
+            class="w-64 bg-gray-800 border-r border-gray-700 flex flex-col justify-between h-full shadow-inner z-40 overflow-y-auto">
+            <div class="p-4">
+                <p class="px-2 text-xs font-bold text-gray-500 uppercase tracking-widest mb-4 mt-2">Ruangan</p>
+                <ul class="space-y-2">
+                    <!-- Link Ruang Keluarga (Aktif) -->
+
+                    <li>
+                        <summary
+                            class="flex items-center gap-3 rounded-xl px-4 py-1 hover:bg-gray-700 transition group">
+                            <svg class="w-5 h-5 text-gray-400" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 21">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M10 3.464V1.1m0 2.365a5.338 5.338 0 0 1 5.133 5.368v1.8c0 2.386 1.867 2.982 1.867 4.175C17 15.4 17 16 16.462 16H3.538C3 16 3 15.4 3 14.807c0-1.193 1.867-1.789 1.867-4.175v-1.8A5.338 5.338 0 0 1 10 3.464ZM4 3 3 2M2 7H1m15-4 1-1m1 5h1M6.54 16a3.48 3.48 0 0 0 6.92 0H6.54Z" />
+                            </svg>
+                            <a href="index.html"
+                                class="block rounded-lg px-1 py-2 text-sm text-gray-400 font-medium group-hover:text-gray-300">
+                                DASHBOARD
+                            </a>
+                        </summary>
+                    </li>
+
+                    <li>
+                        <a href="keluarga.html"
+                            class="flex items-center gap-3 rounded-xl px-4 py-3 bg-blue-800 transition-all">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                            </svg>
+                            <span class="font-medium text-sm">Ruang Keluarga</span>
+                        </a>
+                    </li>
+
+                    <!-- Link Ruang Makan -->
+                    <li>
+                        <a href="makan.html"
+                            class="flex items-center gap-3 rounded-xl px-4 py-3 text-gray-400 hover:bg-gray-700 hover:text-white transition-colors group">
+                            <svg class="w-5 h-5 group-hover:text-indigo-400" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <span class="font-medium text-sm">Ruang Makan</span>
+                        </a>
+                    </li>
+
+                    <!-- Link Ruang Tidur -->
+                    <li>
+                        <a href="tidur.html"
+                            class="flex items-center gap-3 rounded-xl px-4 py-3 text-gray-400 hover:bg-gray-700 hover:text-white transition-colors group">
+                            <svg class="w-5 h-5 group-hover:text-indigo-400" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                            </svg>
+                            <span class="font-medium text-sm">Ruang Tidur</span>
+                        </a>
+                    </li>
+
+                    <!-- Link Ruang Tamu -->
+                    <li>
+                        <a href="tamu.html"
+                            class="flex items-center gap-3 rounded-xl px-4 py-3 text-gray-400 hover:bg-gray-700 hover:text-white transition-colors group">
+                            <svg class="w-5 h-5 group-hover:text-indigo-400" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span class="font-medium text-sm">Ruang Tamu</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="p-4 text-center border-t border-gray-700">
+                <p class="text-xs text-gray-500">System v1.0</p>
+            </div>
+        </aside>
+
+        <div class="flex-1 flex flex-row flex-wrap justify-center items-center gap-8 p-6 overflow-y-auto">
+
+            <!-- LAMPU 1 -->
+            <div class="flex flex-col items-center">
+                <img src="assets/images/off.png" alt="" id="lampu1" width="160" />
+                <br>
+                <h1 class="text-white font-bold mb-2">LAMPU 1</h1>
+
+                <!-- Toggle -->
+                <label for="default-toggle1" class="inline-flex relative items-center cursor-pointer mb-4">
+                    <input type="checkbox" id="default-toggle1" class="sr-only peer" onchange="saklar()">
+                    <div
+                        class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+                    </div>
+                </label>
+
+                <!-- Tombol -->
+                <div class="flex flex-row gap-2">
+                    <button onclick="saklar('on', 1)"
+                        class="bg-indigo-600 px-6 py-2 text-sm font-medium text-white transition hover:scale-105 hover:bg-indigo-500 rounded shadow">ON</button>
+                    <button onclick="saklar('off', 1)"
+                        class="border border-white px-6 py-2 text-sm font-medium text-white hover:scale-105 hover:bg-white hover:text-gray-900 rounded shadow">OFF</button>
+                </div>
+            </div>
+
+            <!-- LAMPU 2 -->
+            <div class="flex flex-col items-center">
+                <img src="assets/images/off.png" alt="" id="lampu2" width="160" />
+                <br>
+                <h1 class="text-white font-bold mb-2">LAMPU 2</h1>
+
+                <label for="default-toggle2" class="inline-flex relative items-center cursor-pointer mb-4">
+                    <input type="checkbox" id="default-toggle2" class="sr-only peer" onchange="saklar()">
+                    <div
+                        class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+                    </div>
+                </label>
+
+                <div class="flex flex-row gap-2">
+                    <button onclick="saklar('on', 2)"
+                        class="bg-indigo-600 px-6 py-2 text-sm font-medium text-white transition hover:scale-105 hover:bg-indigo-500 rounded shadow">ON</button>
+                    <button onclick="saklar('off', 2)"
+                        class="border border-white px-6 py-2 text-sm font-medium text-white hover:scale-105 hover:bg-white hover:text-gray-900 rounded shadow">OFF</button>
+                </div>
+            </div>
+
+            <!-- LAMPU 3 -->
+            <div class="flex flex-col items-center">
+                <img src="assets/images/off.png" alt="" id="lampu3" width="160" />
+                <br>
+                <h1 class="text-white font-bold mb-2">LAMPU 3</h1>
+
+                <label for="default-toggle3" class="inline-flex relative items-center cursor-pointer mb-4">
+                    <input type="checkbox" id="default-toggle3" class="sr-only peer" onchange="saklar()">
+                    <div
+                        class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+                    </div>
+                </label>
+
+                <div class="flex flex-row gap-2">
+                    <button onclick="saklar('on', 3)"
+                        class="bg-indigo-600 px-6 py-2 text-sm font-medium text-white transition hover:scale-105 hover:bg-indigo-500 rounded shadow">ON</button>
+                    <button onclick="saklar('off', 3)"
+                        class="border border-white px-6 py-2 text-sm font-medium text-white hover:scale-105 hover:bg-white hover:text-gray-900 rounded shadow">OFF</button>
+                </div>
+            </div>
+
+            <!-- SEMUA LAMPU -->
+            <div class="flex flex-col items-center">
+                <br>
+                <h1 class="text-white font-bold mb-2">ALL LAMP</h1>
+                <label for="default-toggle4" class="inline-flex relative items-center cursor-pointer">
+                    <input type="checkbox" id="default-toggle4" class="sr-only peer" onchange="saklarAll()">
+                    <div
+                        class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+                    </div>
+                </label>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script src="lampu.js"></script>
+</body>
+
+</html>
